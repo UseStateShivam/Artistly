@@ -4,12 +4,12 @@ function page() {
   return (
     <div className='w-screen flex h-screen items-center justify-center overflow-hidden'>
       <img src="/Shape.svg" alt="main-shape" className='absolute inset-0 w-full h-full object-cover' />
-      <div className='relative z-10 flex flex-col items-center justify-center w-[456px] h-[536px] p-8 bg-white rounded-2xl shadow-lg border border-[#B9B9B9]'>
+      <div className='relative z-10 flex flex-col items-center justify-center w-[456px] h-[600px] p-8 bg-white rounded-2xl shadow-lg border border-[#B9B9B9]'>
         <h2 className="text-[#202224] text-[24px] font-semibold text-center mb-2">
-          Login to Account
+          Create an Account
         </h2>
         <p className="text-[#202224] text-[14px] opacity-80 text-center mb-6">
-          Please enter your email and password to continue
+          Create your account to get access to the pannel
         </p>
         <form className="flex flex-col gap-4 w-full items-center">
           <div className='w-full'>
@@ -20,12 +20,17 @@ function page() {
               className="w-full mt-1 border border-[#b9b9b975] rounded-md p-3 text-[14px] bg-[#F1F4F9]"
             />
           </div>
+          <div className='w-full'>
+            <label className="text-[#202224] text-[13px] opacity-80">Username</label>
+            <input
+              type="text"
+              placeholder="Enter your username"
+              className="w-full mt-1 border border-[#b9b9b975] rounded-md p-3 text-[14px] bg-[#F1F4F9]"
+            />
+          </div>
           <div className='w-full mt-2'>
             <label className="text-[#202224] text-[13px] flex justify-between opacity-80">
               Password
-              <a href="#" className="font-normal opacity-70">
-                Forgot Password?
-              </a>
             </label>
             <input
               type="password"
@@ -43,13 +48,13 @@ function page() {
             type="submit"
             className="bg-[#4880FF] text-white rounded-md p-2 font-medium text-center w-[80%] hover:cursor-pointer mt-6"
           >
-            Sign In
+            Request Access
           </button>
         </form>
         <p className="text-center mt-4 text-sm opacity-80 text-[#202224]">
-          Don't have an account?&nbsp;
-          <a href="/sign-up" className="text-[#4880FF] underline">
-            Create Account
+          Already have an account?&nbsp;
+          <a href="/login" className="text-[#4880FF] underline">
+            Login
           </a>
         </p>
       </div>
