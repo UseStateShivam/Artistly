@@ -1,4 +1,3 @@
-// /data/artists.json
 export const artists = [
   {
     id: "1",

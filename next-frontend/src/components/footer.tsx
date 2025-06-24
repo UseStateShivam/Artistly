@@ -5,13 +5,12 @@ function page() {
     return (
         <main className='w-full h-fit relative'>
             <img
-                src="./footer.avif"
-                alt="hero background"
+                src="/footer.avif"
+                alt="footer background"
                 className='absolute object-cover w-full h-full inset-0 top-0 left-0 right-0 -z-10'
             />
             <footer className="text-white px-6 md:px-12 lg:px-20 py-12">
                 <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-4 gap-12 mt-8">
-                    {/* Left column: Logo, Desc, Social */}
                     <div className="space-y-5 col-span-1 lg:col-span-1">
                         <div className="flex items-center gap-2">
                             <a href='/' className="font-bold text-[28px] mr-8 text-[#b7f37b]">Artistly</a>

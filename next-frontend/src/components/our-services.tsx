@@ -5,37 +5,37 @@ import React from 'react';
 const services = [
   {
     icon: '/icons/mic.svg',
-    title: 'Singers',
+    title: 'Singer',
     description:
       'Professional vocalists for events, recordings, and live performances across various genres to elevate your occasion.',
   },
   {
     icon: '/icons/dancer.svg',
-    title: 'Dancers',
+    title: 'Dancer',
     description:
       'Talented dancers specializing in diverse styles, available for stage shows, private events, and choreography for all occasions.',
   },
   {
     icon: '/icons/dj.svg',
-    title: 'DJs',
+    title: 'DJ',
     description:
       'Experienced DJs to set the perfect mood, mixing tracks and creating unforgettable musical experiences for any event.',
   },
   {
     icon: '/icons/camera.svg',
-    title: 'Photographers',
+    title: 'Photographer',
     description:
       'Creative photographers capturing memorable moments for weddings, parties, portraits, and commercial projects alike.',
   },
   {
     icon: '/icons/brush.svg',
-    title: 'Painters',
+    title: 'Painter',
     description:
       'Skilled painters offering custom artworks, live painting sessions, and mural creations for personal or business spaces.',
   },
   {
     icon: '/icons/makeup.svg',
-    title: 'Makeup Artists',
+    title: 'Makeup-Artist',
     description:
       'Professional makeup artists for weddings, photoshoots, fashion shows, and special occasions, ensuring you look your best.',
   },
@@ -67,6 +67,7 @@ function OurServices() {
             <div
               key={idx}
               className="group relative cursor-pointer"
+              onClick={() => window.location.href = `/artists/${service.title.toLowerCase()}`}
             >
               <div className="absolute inset-0 bg-[#174f46] rounded-xl scale-[1] z-0" />
               <div className="relative z-10 bg-white rounded-xl shadow-lg border border-gray-100 p-6 transition-transform duration-300 group-hover:rotate-[5deg]">
