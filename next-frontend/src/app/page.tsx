@@ -17,17 +17,17 @@ function page() {
       <main className='w-full h-screen relative'>
         <img
           src="./hero-bg.png"
-          alt="hero background"
+          alt="Eventful India hero section background"
           className='absolute object-cover w-full h-full inset-0 top-0 left-0 right-0 -z-10'
         />
         <img
           src="./hero-free-hand.png"
-          alt="hero free hand"
+          alt="Free hand illustration for Eventful India hero section"
           className='absolute top-[39%] right-[48%] scale-[60%]'
         />
         <img
           src="./hero-arrow.png"
-          alt="hero arrow"
+          alt="Arrow graphic highlighting Eventful India call to action"
           className='absolute bottom-[5%] right-[40%] scale-[60%]'
         />
         <div className='z-10 relative flex items-center justify-between h-full px-24'>
@@ -53,7 +53,7 @@ function page() {
           <div className='h-full w-[50%] flex items-center justify-center pt-18 relative'>
             <img
               src="./hero-img.png"
-              alt="hero free hand"
+              alt="Eventful India main hero image with artist illustration"
               className='w-[80%]'
             />
             <SatisfactionCard />
