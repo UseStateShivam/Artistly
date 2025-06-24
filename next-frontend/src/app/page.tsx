@@ -40,7 +40,10 @@ function page() {
 
           {/* CTA + Contact */}
           <div className="flex flex-wrap items-center gap-8">
-            <button className="bg-[#b7f37b] text-[#174f46] text-md font-semibold px-6 py-3 rounded-2xl hover:brightness-125 transition cursor-pointer">
+            <button
+              className="bg-[#b7f37b] text-[#174f46] text-md font-semibold px-6 py-3 rounded-2xl hover:brightness-125 transition cursor-pointer"
+              onClick={() => window.location.href = '/artists'}
+            >
               Explore Artists
             </button>
 
