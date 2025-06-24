@@ -37,7 +37,7 @@ export default function ArtistCard({ name, category, price, location, image , id
                         window.location.href = `/artists/${category}/${id}`;
                     }}
                 >
-                    View Profile
+                    Ask for Quote
                 </button>
             </div>
         </div>
