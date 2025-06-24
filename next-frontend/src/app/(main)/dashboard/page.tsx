@@ -2,7 +2,7 @@
 
 import { artistData } from '@/lib/constants/artist-data';
 import { RootState } from '@/lib/utils/store';
-import { useRouter } from 'next/navigation'; // ✅ Correct for App Router
+import { useRouter } from 'next/navigation'; 
 import React, { useEffect } from 'react';
 import { useSelector } from 'react-redux';
 
