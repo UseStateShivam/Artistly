@@ -105,7 +105,7 @@ function page() {
               </div>
             </div>
           </div>
-        </div>
+        </div>  
         <Testimonials />
         <AboutUs />
         <OurServices />
