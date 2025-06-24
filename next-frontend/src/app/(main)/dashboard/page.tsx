@@ -19,16 +19,22 @@ export default function ManagerDashboard() {
     price: 'All',
   });
 
+  const [currentPage, setCurrentPage] = useState(1);
+  const itemsPerPage = 10;
+
   // Filter logic
   const filteredArtists = useMemo(() => {
     return artistData.filter((artist) => {
       const matchesName = artist.name.toLowerCase().includes(filters.name.toLowerCase());
       const matchesLocation = artist.location.toLowerCase().includes(filters.location.toLowerCase());
+
       const extractPrice = (price: string): number => {
-        const number = parseInt(price.replace(/[^\d]/g, ""));
-        return price.toLowerCase().includes("k") ? number * 1000 : number;
+        const number = parseInt(price.replace(/[^\d]/g, ''));
+        return price.toLowerCase().includes('k') ? number * 1000 : number;
       };
+
       const priceValue = extractPrice(artist.price);
+
       const matchesPrice =
         filters.price === 'All' ||
         (filters.price === 'Under ₹10k' && priceValue < 10000) ||
@@ -38,6 +44,17 @@ export default function ManagerDashboard() {
       return matchesName && matchesLocation && matchesPrice;
     });
   }, [filters]);
+
+  // Reset to first page on filters change
+  useEffect(() => {
+    setCurrentPage(1);
+  }, [filters]);
+
+  const totalArtists = filteredArtists.length;
+  const totalPages = Math.ceil(totalArtists / itemsPerPage);
+  const startIndex = (currentPage - 1) * itemsPerPage;
+  const endIndex = startIndex + itemsPerPage;
+  const paginatedArtists = filteredArtists.slice(startIndex, endIndex);
 
   useEffect(() => {
     if (!isLoggedIn) {
@@ -53,7 +70,29 @@ export default function ManagerDashboard() {
       <p className="text-[#174f46] mb-6">List of all onboarded artists (dummy data).</p>
 
       <div className="flex flex-col md:flex-row gap-6 mb-6">
-        <Filter filters={filters} setFilters={setFilters} view='horizontal'/>
+        <Filter filters={filters} setFilters={setFilters} view="horizontal" />
+      </div>
+
+      <div className="flex justify-between items-center mb-4">
+        <p className="text-[#174f46] text-sm">
+          Showing {totalArtists === 0 ? 0 : startIndex + 1}–{Math.min(endIndex, totalArtists)} of {totalArtists} artists
+        </p>
+        <div className="flex gap-2">
+          <button
+            onClick={() => setCurrentPage((prev) => Math.max(prev - 1, 1))}
+            disabled={currentPage === 1}
+            className="px-3 py-1 rounded bg-[#174f46] text-white disabled:opacity-50"
+          >
+            Prev
+          </button>
+          <button
+            onClick={() => setCurrentPage((prev) => Math.min(prev + 1, totalPages))}
+            disabled={currentPage === totalPages}
+            className="px-3 py-1 rounded bg-[#174f46] text-white disabled:opacity-50"
+          >
+            Next
+          </button>
+        </div>
       </div>
 
       <div className="overflow-x-auto rounded-xl shadow-lg border border-[#dee4e3]">
@@ -68,8 +107,8 @@ export default function ManagerDashboard() {
             </tr>
           </thead>
           <tbody className="bg-[#dee4e3] text-[#174f46]">
-            {filteredArtists.length > 0 ? (
-              filteredArtists.map((artist) => (
+            {paginatedArtists.length > 0 ? (
+              paginatedArtists.map((artist) => (
                 <tr key={artist.id} className="border-b border-[#b7f37b]">
                   <td className="px-6 py-4">{artist.name}</td>
                   <td className="px-6 py-4 capitalize">{artist.category}</td>
