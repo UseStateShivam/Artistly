@@ -1,45 +1,7 @@
 'use client';
 
-import React from 'react';
-
-const services = [
-  {
-    icon: '/icons/mic.svg',
-    title: 'Singer',
-    description:
-      'Professional vocalists for events, recordings, and live performances across various genres to elevate your occasion.',
-  },
-  {
-    icon: '/icons/dancer.svg',
-    title: 'Dancer',
-    description:
-      'Talented dancers specializing in diverse styles, available for stage shows, private events, and choreography for all occasions.',
-  },
-  {
-    icon: '/icons/dj.svg',
-    title: 'DJ',
-    description:
-      'Experienced DJs to set the perfect mood, mixing tracks and creating unforgettable musical experiences for any event.',
-  },
-  {
-    icon: '/icons/camera.svg',
-    title: 'Photographer',
-    description:
-      'Creative photographers capturing memorable moments for weddings, parties, portraits, and commercial projects alike.',
-  },
-  {
-    icon: '/icons/brush.svg',
-    title: 'Painter',
-    description:
-      'Skilled painters offering custom artworks, live painting sessions, and mural creations for personal or business spaces.',
-  },
-  {
-    icon: '/icons/makeup.svg',
-    title: 'Makeup-Artist',
-    description:
-      'Professional makeup artists for weddings, photoshoots, fashion shows, and special occasions, ensuring you look your best.',
-  },
-];
+import { services } from '@/lib/constants/services';
+import SectionHeader from './ui/section-header';
 
 function OurServices() {
   return (
@@ -49,18 +11,13 @@ function OurServices() {
         alt="hero free hand"
         className="absolute -top-[5.8%] right-[14%] scale-[10%]"
       />
-      <div className="flex flex-col justify-center items-center w-[50%] mx-auto">
-        <p className="text-sm font-semibold text-[#174f46] tracking-wide mb-3">
-          OUR SERVICES
-        </p>
-        <h2 className="text-[56px] font-bold text-[#174f46] mb-6 leading-[56px] text-center">
-          One-Stop Solution for All Your Artistic Needs
-        </h2>
-        <p className="text-[#174f46] mb-8 leading-relaxed text-center w-[76%] text-lg">
-          We offer a wide range of professional artistic services tailored to meet your unique needs, a one-time consultation, or specialized services.
-        </p>
+      <div className='w-[50%] mx-auto mb-8'>
+        <SectionHeader
+          title="OUR SERVICES"
+          subtitle="One-Stop Solution for All Your Artistic Needs"
+          description="We offer a wide range of professional artistic services tailored to meet your unique needs, a one-time consultation, or specialized services."
+        />
       </div>
-
       <div className="p-8 md:px-12 lg:px-20">
         <div className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
           {services.map((service, idx) => (

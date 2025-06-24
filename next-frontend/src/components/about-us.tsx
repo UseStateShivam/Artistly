@@ -2,6 +2,7 @@
 
 import React from 'react';
 import { CalendarDays, Leaf, Phone, ShieldCheck } from 'lucide-react';
+import SectionHeader from './ui/section-header';
 
 function AboutUs() {
     return (
@@ -9,7 +10,7 @@ function AboutUs() {
             <img
                 src="./about-free-hand.png"
                 alt="hero free hand"
-                className='absolute top-[27%] right-[8%] scale-[12%]'
+                className='absolute top-[21%] right-[8%] scale-[12%]'
             />
             <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
                 <div className="relative flex items-end justify-center">
@@ -25,17 +26,14 @@ function AboutUs() {
                     />
                 </div>
                 <div className='flex flex-col justify-end items-start h-full w-full'>
-                    <p className="text-sm font-semibold text-[#174f46] tracking-wide mb-2">
-                        WHY CHOOSE US
-                    </p>
-                    <h2 className="text-[56px] font-bold text-[#174f46] mb-6 leading-[56px]">
-                        Why Clients Love Our<br />Talented Artists
-                    </h2>
-                    <p className="text-gray-600 mb-8 leading-relaxed">
-                        Choosing the right artist matters. That’s why we focus on delivering
-                        unparalleled quality, reliability, and care. From using eco-friendly products to
-                        offering flexible scheduling and transparent pricing.
-                    </p>
+                    <div className='mb-8'>
+                        <SectionHeader
+                            title="WHY CHOOSE US"
+                            subtitle="Why Clients Love Our Talented Artists"
+                            description="Choosing the right artist matters. That’s why we focus on delivering unparalleled quality, reliability, and care. From using eco-friendly products to offering flexible scheduling and transparent pricing."
+                            align="left"
+                        />
+                    </div>
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 gap-x-8 mb-8">
                         <div className="flex items-center gap-3">
                             <ShieldCheck className="text-[#174f46]" size={20} />

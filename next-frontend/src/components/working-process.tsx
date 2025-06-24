@@ -1,5 +1,6 @@
 import React from 'react';
 import { CheckCircle } from 'lucide-react';
+import SectionHeader from './ui/section-header';
 
 const steps = [
     {
@@ -41,17 +42,12 @@ function WorkingProcess() {
             />
             <div className="mx-auto text-center flex">
                 <div className="flex flex-col gap-10 w-[50%] mx-auto">
-                    <div>
-                        <p className="text-sm uppercase font-semibold text-[#174f46] tracking-wide mb-3 text-left">
-                            Working Process
-                        </p>
-                        <h2 className="text-4xl md:text-5xl font-bold text-[#174f46] mb-4 text-left">
-                            Our Working process
-                        </h2>
-                        <p className="text-[#174f46] text-md text-left">
-                            We believe in making the working process simple, efficient, and hassle-free for our clients. Our streamlined approach ensures every step is handled with care and professionalism, from booking your service.
-                        </p>
-                    </div>
+                    <SectionHeader
+                        title="WORKING PROCESS"
+                        subtitle="Our Step-by-Step Approach"
+                        description="We follow a systematic process to ensure the best results for our clients. Our team is dedicated to making your experience seamless and enjoyable."
+                        align="left"
+                    />
                     <div>
                         <img
                             src="/process.png"
@@ -60,7 +56,7 @@ function WorkingProcess() {
                         />
                     </div>
                 </div>
-                <div className="flex flex-col gap-3 w-[40%] justify-between">
+                <div className="flex flex-col gap-3 w-[40%] justify-end">
                     {steps.map((step, idx) => (
                         <div
                             key={idx}
