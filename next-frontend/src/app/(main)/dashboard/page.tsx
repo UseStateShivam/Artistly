@@ -53,8 +53,7 @@ export default function ManagerDashboard() {
       <p className="text-[#174f46] mb-6">List of all onboarded artists (dummy data).</p>
 
       <div className="flex flex-col md:flex-row gap-6 mb-6">
-        <Filter filters={filters} setFilters={setFilters} />
-        {/* You can add more filter controls or content here if needed */}
+        <Filter filters={filters} setFilters={setFilters} view='horizontal'/>
       </div>
 
       <div className="overflow-x-auto rounded-xl shadow-lg border border-[#dee4e3]">
