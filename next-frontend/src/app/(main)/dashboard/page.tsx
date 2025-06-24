@@ -1,66 +1,28 @@
 'use client';
 
-import React, { useEffect, useState, useMemo } from 'react';
+import React, { useEffect } from 'react';
 import { useSelector } from 'react-redux';
 import { useRouter } from 'next/navigation';
 
-import { artistData } from '@/lib/constants/artist-data';
 import { RootState } from '@/lib/utils/store';
 import Filter from '@/components/filter';
+import { useArtistSearch } from '@/lib/hooks/useArtistSearch'; // ✅ use hook
 
 export default function ManagerDashboard() {
   const isLoggedIn = useSelector((state: RootState) => state.auth.isLoggedIn);
   const router = useRouter();
 
-  const [filters, setFilters] = useState({
-    name: '',
-    category: 'All',
-    location: '',
-    price: 'All',
-  });
-
-  const [currentPage, setCurrentPage] = useState(1);
-  const itemsPerPage = 10;
-
-  const filteredArtists = useMemo(() => {
-    return artistData.filter((artist) => {
-      const matchesName = artist.name.toLowerCase().includes(filters.name.toLowerCase());
-
-      const matchesLocation = artist.location
-        .toLowerCase()
-        .includes(filters.location.toLowerCase());
-
-      const matchesCategory =
-        filters.category === 'All' ||
-        artist.category.replace(/\s+/g, '').toLowerCase() ===
-          filters.category.replace(/\s+/g, '').toLowerCase();
-
-      const extractPrice = (price: string): number => {
-        const number = parseInt(price.replace(/[^\d]/g, ''));
-        return price.toLowerCase().includes('k') ? number * 1000 : number;
-      };
-
-      const priceValue = extractPrice(artist.price);
-
-      const matchesPrice =
-        filters.price === 'All' ||
-        (filters.price === 'Under ₹10k' && priceValue < 10000) ||
-        (filters.price === '₹10k - ₹20k' && priceValue >= 10000 && priceValue <= 20000) ||
-        (filters.price === 'Above ₹20k' && priceValue > 20000);
-
-      return matchesName && matchesLocation && matchesCategory && matchesPrice;
-    });
-  }, [filters]);
-
-  useEffect(() => {
-    setCurrentPage(1);
-  }, [filters]);
-
-  const totalArtists = filteredArtists.length;
-  const totalPages = Math.ceil(totalArtists / itemsPerPage);
-  const startIndex = (currentPage - 1) * itemsPerPage;
-  const endIndex = startIndex + itemsPerPage;
-  const paginatedArtists = filteredArtists.slice(startIndex, endIndex);
+  const {
+    filters,
+    setFilters,
+    currentPage,
+    setCurrentPage,
+    totalArtists,
+    totalPages,
+    paginatedArtists,
+    startIndex,
+    endIndex,
+  } = useArtistSearch();
 
   useEffect(() => {
     if (!isLoggedIn) {
