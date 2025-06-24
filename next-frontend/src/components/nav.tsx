@@ -4,7 +4,7 @@ import React from 'react';
 
 function Nav() {
     return (
-        <nav className="flex justify-between items-center p-2 px-16 bg-[#174f46] z-100 top-0 left-0 right-0 fixed">
+        <nav className="flex justify-between items-center p-2 px-16 bg-[#174f46] z-[100] top-0 left-0 right-0 fixed">
             <a href='/' className="font-bold text-[28px] mr-8 text-[#b7f37b]">Artistly</a>
             <ul className="flex gap-6 list-none m-0 p-0 font-semibold">
                 <li>
