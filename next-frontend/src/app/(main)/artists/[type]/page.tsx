@@ -3,7 +3,7 @@
 import { notFound } from "next/navigation";
 import { use } from "react";
 
-import ArtistCard from "@/components/artistCard";
+import ArtistCard from "@/components/ui/artistCard";
 import Filter from "@/components/filter";
 import { artistTypes } from "@/lib/constants/artist-types";
 import { useArtistFilter } from "@/lib/hooks/useArtistFilter";
