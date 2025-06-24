@@ -5,7 +5,7 @@ import { CalendarDays, Leaf, Phone, ShieldCheck } from 'lucide-react';
 
 function AboutUs() {
     return (
-        <div className="bg-[#f9fafa] py-16 px-6 md:px-12 lg:px-20 relative mb-16">
+        <div className="bg-[#f9fafa] py-16 px-6 md:px-12 lg:px-20 relative mb-16" id={'about-us'}>
             <img
                 src="./about-free-hand.png"
                 alt="hero free hand"

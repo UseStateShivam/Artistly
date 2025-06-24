@@ -9,13 +9,13 @@ function Nav() {
                     <a href="/" className="no-underline text-[#dee4e3]">Home</a>
                 </li>
                 <li>
-                    <a href="/gallery" className="no-underline text-[#dee4e3]">Artists</a>
+                    <a href="/artists" className="no-underline text-[#dee4e3]">Artists</a>
                 </li>
                 <li>
-                    <a href="/about" className="no-underline text-[#dee4e3]">Onboarding</a>
+                    <a href="/onboarding" className="no-underline text-[#dee4e3]">Onboarding</a>
                 </li>
                 <li>
-                    <a href="/about" className="no-underline text-[#dee4e3]">About Us</a>
+                    <a href="/#about-us" className="no-underline text-[#dee4e3]">About Us</a>
                 </li>
             </ul>
             <div className="flex items-center">

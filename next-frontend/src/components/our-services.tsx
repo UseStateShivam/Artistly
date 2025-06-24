@@ -47,7 +47,7 @@ function OurServices() {
       <img
         src="./about-free-hand.png"
         alt="hero free hand"
-        className="absolute -top-[6.3%] right-[14%] scale-[10%]"
+        className="absolute -top-[5.8%] right-[14%] scale-[10%]"
       />
       <div className="flex flex-col justify-center items-center w-[50%] mx-auto">
         <p className="text-sm font-semibold text-[#174f46] tracking-wide mb-3">
