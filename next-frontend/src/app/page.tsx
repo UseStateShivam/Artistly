@@ -1,3 +1,10 @@
+'use client'
+
+import AboutUs from '@/components/about-us'
+import Footer from '@/components/footer'
+import OurServices from '@/components/our-services'
+import Testimonials from '@/components/testimonials'
+import WorkingProcess from '@/components/working-process'
 import React from 'react'
 
 function page() {
@@ -11,7 +18,7 @@ function page() {
       <img
         src="./hero-free-hand.png"
         alt="hero free hand"
-        className='absolute top-[40%] right-[48%] scale-[60%]'
+        className='absolute top-[39%] right-[48%] scale-[60%]'
       />
       <img
         src="./hero-arrow.png"
@@ -21,15 +28,15 @@ function page() {
       <div className='z-10 relative flex items-center justify-between h-full px-24'>
         <div className="text-[#fff] px-6 pt-18 min-h-screen flex flex-col justify-center w-[50%] gap-6">
           {/* Heading */}
-          <h1 className="text-6xl font-bold leading-tight">
+          <h1 className="text-6xl font-bold leading-[64px]">
             Brilliant Events,<br />
             Magical <span className="text-[#b7f37b]">Experiences</span>
           </h1>
 
           {/* Subheading */}
-          <p className="text-lg text-[#dee4e3] pr-8">
-            Discover talented artists for your next event. From singers to speakers, we make it easy to find, connect, and book the perfect performer all in one place.
-          </p>
+            <p className="text-lg text-[#dee4e3] pr-8">
+            I am Shivam Verma, this is a pre-interview task for Eventful India Marketing Services. It showcases modern, responsive web application and engaging user experience. Thank you for reviewing my work!
+            </p>
 
           {/* CTA + Contact */}
           <div className="flex flex-wrap items-center gap-8">
@@ -39,7 +46,7 @@ function page() {
 
             <div className="text-sm">
               <p className="text-[#dee4e3]">Any time call</p>
-              <p className="text-[#dee4e3] font-semibold text-lg">📞 +1-123-456-7290</p>
+              <p className="text-[#dee4e3] font-semibold text-lg">📞 +91-7814686228</p>
             </div>
           </div>
 
@@ -93,15 +100,11 @@ function page() {
           </div>
         </div>
       </div>
-      <a href="/artists">Explore Artists</a>
-
-      <h2>Categories</h2>
-      <ul>
-        <li>Singers</li>
-        <li>Dancers</li>
-        <li>Speakers</li>
-        <li>DJs</li>
-      </ul>
+      <Testimonials />
+      <AboutUs />
+      <OurServices />
+      <WorkingProcess />
+      <Footer />
     </main>
   )
 }
