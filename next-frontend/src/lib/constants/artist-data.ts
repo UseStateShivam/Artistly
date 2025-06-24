@@ -53,7 +53,7 @@ export const artistData = [
         id: 7,
         name: "Anjali Desai",
         category: "dancer",
-        price: "₹13k",
+        price: "₹3k",
         location: "Pune",
         image: commonImage
     },

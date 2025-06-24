@@ -12,7 +12,7 @@ type Props = {
 export default function ArtistCard({ name, category, price, location, image , id }: Props) {
     return (
         <div
-            className="w-[300px] h-[420px] bg-[#dee4e3] border border-[#dbe2ea] rounded-2xl p-4 shadow-md hover:shadow-xl transition-all duration-300 flex flex-col cursor-pointer">
+            className="w-[300px] h-[420px] bg-[#dee4e3] border border-[#dbe2ea] rounded-2xl p-4 shadow-md hover:shadow-xl transition-all duration-300 flex flex-col">
             <div className="h-[180px] w-full overflow-hidden rounded-xl">
                 <Image
                     src={image}
