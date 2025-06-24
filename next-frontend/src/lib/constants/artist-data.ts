@@ -41,6 +41,39 @@ export const artistData = [
         location: "Hyderabad",
         image: commonImage
     },
+    // Added singers
+    {
+        id: 17,
+        name: "Ishaan Gupta",
+        category: "singer",
+        price: "₹15k",
+        location: "Bhopal",
+        image: commonImage
+    },
+    {
+        id: 18,
+        name: "Tanvi Reddy",
+        category: "singer",
+        price: "₹13k",
+        location: "Visakhapatnam",
+        image: commonImage
+    },
+    {
+        id: 19,
+        name: "Devika Menon",
+        category: "singer",
+        price: "₹12k",
+        location: "Trivandrum",
+        image: commonImage
+    },
+    {
+        id: 20,
+        name: "Kabir Chawla",
+        category: "singer",
+        price: "₹16k",
+        location: "Patna",
+        image: commonImage
+    },
     {
         id: 6,
         name: "Neha Kapoor",
