@@ -16,10 +16,17 @@ type FilterProps = {
     price: string;
   }>>;
   view?: 'horizontal' | 'vertical';
+  searchCategory?: boolean;
 };
 
-export default function Filter({ filters, setFilters, view = 'vertical' }: FilterProps) {
-  const prices = ["All", "Under ₹10k", "₹10k - ₹20k", "Above ₹20k"];
+export default function Filter({
+  filters,
+  setFilters,
+  view = 'vertical',
+  searchCategory = false,
+}: FilterProps) {
+  const prices = ['All', 'Under ₹10k', '₹10k - ₹20k', 'Above ₹20k'];
+  const categories = ['All', 'Singer', 'Dancer', 'DJ', 'Makeup-Artist', 'Photographer', 'Painter'];
   const isHorizontal = view === 'horizontal';
 
   return (
@@ -32,6 +39,7 @@ export default function Filter({ filters, setFilters, view = 'vertical' }: Filte
         Filter Artists
       </h3>
 
+      {/* Name */}
       <div className={isHorizontal ? 'flex flex-col' : 'mb-4 w-full'}>
         <label className="block text-sm font-medium text-[#174f46] mb-1">Search by Name</label>
         <input
@@ -43,6 +51,25 @@ export default function Filter({ filters, setFilters, view = 'vertical' }: Filte
         />
       </div>
 
+      {/* Category (optional) */}
+      {searchCategory && (
+        <div className={isHorizontal ? 'flex flex-col' : 'mb-4 w-full'}>
+          <label className="block text-sm font-medium text-[#174f46] mb-1">Category</label>
+          <select
+            value={filters.category}
+            onChange={(e) => setFilters((prev) => ({ ...prev, category: e.target.value }))}
+            className="border border-[#174f46] rounded-md px-3 py-2 text-sm bg-white"
+          >
+            {categories.map((category) => (
+              <option key={category} value={category}>
+                {category}
+              </option>
+            ))}
+          </select>
+        </div>
+      )}
+
+      {/* Location */}
       <div className={isHorizontal ? 'flex flex-col' : 'mb-4 w-full'}>
         <label className="block text-sm font-medium text-[#174f46] mb-1">Location</label>
         <input
@@ -54,6 +81,7 @@ export default function Filter({ filters, setFilters, view = 'vertical' }: Filte
         />
       </div>
 
+      {/* Price */}
       <div className={isHorizontal ? 'flex flex-col' : 'w-full'}>
         <label className="block text-sm font-medium text-[#174f46] mb-1">Price</label>
         <select

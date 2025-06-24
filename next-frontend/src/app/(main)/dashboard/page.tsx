@@ -14,7 +14,7 @@ export default function ManagerDashboard() {
 
   const [filters, setFilters] = useState({
     name: '',
-    category: '',
+    category: 'All',
     location: '',
     price: 'All',
   });
@@ -22,11 +22,18 @@ export default function ManagerDashboard() {
   const [currentPage, setCurrentPage] = useState(1);
   const itemsPerPage = 10;
 
-  // Filter logic
   const filteredArtists = useMemo(() => {
     return artistData.filter((artist) => {
       const matchesName = artist.name.toLowerCase().includes(filters.name.toLowerCase());
-      const matchesLocation = artist.location.toLowerCase().includes(filters.location.toLowerCase());
+
+      const matchesLocation = artist.location
+        .toLowerCase()
+        .includes(filters.location.toLowerCase());
+
+      const matchesCategory =
+        filters.category === 'All' ||
+        artist.category.replace(/\s+/g, '').toLowerCase() ===
+          filters.category.replace(/\s+/g, '').toLowerCase();
 
       const extractPrice = (price: string): number => {
         const number = parseInt(price.replace(/[^\d]/g, ''));
@@ -41,11 +48,10 @@ export default function ManagerDashboard() {
         (filters.price === '₹10k - ₹20k' && priceValue >= 10000 && priceValue <= 20000) ||
         (filters.price === 'Above ₹20k' && priceValue > 20000);
 
-      return matchesName && matchesLocation && matchesPrice;
+      return matchesName && matchesLocation && matchesCategory && matchesPrice;
     });
   }, [filters]);
 
-  // Reset to first page on filters change
   useEffect(() => {
     setCurrentPage(1);
   }, [filters]);
@@ -70,7 +76,7 @@ export default function ManagerDashboard() {
       <p className="text-[#174f46] mb-6">List of all onboarded artists (dummy data).</p>
 
       <div className="flex flex-col md:flex-row gap-6 mb-6">
-        <Filter filters={filters} setFilters={setFilters} view="horizontal" />
+        <Filter filters={filters} setFilters={setFilters} view="horizontal" searchCategory={true} />
       </div>
 
       <div className="flex justify-between items-center mb-4">
