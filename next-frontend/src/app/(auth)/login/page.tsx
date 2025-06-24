@@ -1,9 +1,14 @@
-'use client'
+'use client';
 
-import React, { useState } from 'react'
+import React, { useState } from 'react';
+import { useDispatch } from 'react-redux';
+import { login } from '@/lib/slices/authSlice';
+import { useRouter } from 'next/navigation';
 
 function page() {
   const [error, setError] = useState("");
+  const dispatch = useDispatch();
+  const router = useRouter();
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -12,7 +17,8 @@ function page() {
     const normalized = input.toLowerCase().replace(/[^a-z]/g, "");
 
     if (normalized.includes("shivam") && normalized.includes("verma")) {
-      window.location.href = '/dashboard';
+      dispatch(login());
+      router.push('/dashboard');
     } else {
       setError("Incorrect secret key, my lord. Try again 👑");
     }
@@ -20,7 +26,7 @@ function page() {
 
   return (
     <div className='w-screen flex h-screen items-center justify-center overflow-hidden bg-[#174f46]'>
-      <div className='relative z-10 flex flex-col items-center justify-center w-[406px] h-[auto] p-8 bg-white rounded-2xl shadow-lg border border-[#B9B9B9]'>
+      <div className='relative z-10 flex flex-col items-center justify-center w-[406px] h-auto p-8 bg-white rounded-2xl shadow-lg border border-[#B9B9B9]'>
         <h2 className="text-[#174f46] text-[24px] font-semibold text-center mb-2">
           Login to Dashboard
         </h2>
@@ -67,7 +73,7 @@ function page() {
         </p>
       </div>
     </div>
-  )
+  );
 }
 
 export default page;

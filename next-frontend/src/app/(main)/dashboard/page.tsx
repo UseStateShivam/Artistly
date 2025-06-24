@@ -1,32 +1,23 @@
 'use client';
 
-import React from 'react';
-
-const dummyArtists = [
-  {
-    id: 1,
-    name: 'Aarav Mehta',
-    category: 'Singer',
-    location: 'Delhi',
-    fee: 15000,
-  },
-  {
-    id: 2,
-    name: 'Neha Kapoor',
-    category: 'Makeup Artist',
-    location: 'Mumbai',
-    fee: 20000,
-  },
-  {
-    id: 3,
-    name: 'Rajiv Nair',
-    category: 'DJ',
-    location: 'Bangalore',
-    fee: 18000,
-  },
-];
+import { artistData } from '@/lib/constants/artist-data';
+import { RootState } from '@/lib/utils/store';
+import { useRouter } from 'next/navigation'; // ✅ Correct for App Router
+import React, { useEffect } from 'react';
+import { useSelector } from 'react-redux';
 
 export default function ManagerDashboard() {
+  const isLoggedIn = useSelector((state: RootState) => state.auth.isLoggedIn);
+  const router = useRouter();
+
+  useEffect(() => {
+    if (!isLoggedIn) {
+      router.push('/login');
+    }
+  }, [isLoggedIn, router]);
+
+  if (!isLoggedIn) return null;
+
   return (
     <main className="py-28 px-4 md:px-16 max-w-6xl mx-auto">
       <h1 className="text-3xl font-bold text-[#174f46] mb-4">Manager Dashboard</h1>
@@ -44,12 +35,14 @@ export default function ManagerDashboard() {
             </tr>
           </thead>
           <tbody className="bg-[#dee4e3] text-[#174f46]">
-            {dummyArtists.map((artist) => (
+            {artistData.map((artist) => (
               <tr key={artist.id} className="border-b border-[#b7f37b]">
                 <td className="px-6 py-4">{artist.name}</td>
-                <td className="px-6 py-4">{artist.category}</td>
+                <td className="px-6 py-4 capitalize">{artist.category}</td>
                 <td className="px-6 py-4">{artist.location}</td>
-                <td className="px-6 py-4">₹{artist.fee.toLocaleString()}</td>
+                <td className="px-6 py-4">
+                  {artist.price}
+                </td>
                 <td className="px-6 py-4">
                   <button className="px-4 py-2 rounded bg-[#b7f37b] text-[#174f46] font-semibold hover:bg-[#a3dd6e] transition">
                     View
