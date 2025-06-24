@@ -9,13 +9,12 @@ function page() {
                 alt="hero background"
                 className='absolute object-cover w-full h-full inset-0 top-0 left-0 right-0 -z-10'
             />
-            <footer className="text-white px-6 md:px-12 lg:px-20 py-16">
-                <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-4 gap-12">
+            <footer className="text-white px-6 md:px-12 lg:px-20 py-12">
+                <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-4 gap-12 mt-8">
                     {/* Left column: Logo, Desc, Social */}
                     <div className="space-y-5 col-span-1 lg:col-span-1">
                         <div className="flex items-center gap-2">
-                            <img src="/icons/logo.svg" alt="ShineEase" className="w-6 h-6" />
-                            <h3 className="text-xl font-bold text-[#b0ff92]">ShineEase</h3>
+                            <a href='/' className="font-bold text-[28px] mr-8 text-[#b7f37b]">Artistly</a>
                         </div>
                         <p className="text-sm text-gray-200 leading-relaxed">
                             Expert cleaning solutions for homes and businesses, ensuring spotless results with ease and care.
