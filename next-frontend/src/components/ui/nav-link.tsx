@@ -1,8 +1,18 @@
 import React from 'react'
 
-function NavLink() {
+interface NavLinkProps {
+  href: string
+  children: React.ReactNode
+  className?: string
+}
+
+function NavLink({ href, children, className = "no-underline text-[#dee4e3]" }: NavLinkProps) {
   return (
-    <div>NavLink</div>
+    <li>
+      <a href={href} className={className}>
+        {children}
+      </a>
+    </li>
   )
 }
 

@@ -3,6 +3,8 @@
 import React from 'react';
 import { CalendarDays, Leaf, Phone, ShieldCheck } from 'lucide-react';
 import SectionHeader from './ui/section-header';
+import Button from './ui/button';
+import Feature from './ui/feature';
 
 function AboutUs() {
     return (
@@ -35,29 +37,10 @@ function AboutUs() {
                         />
                     </div>
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 gap-x-8 mb-8">
-                        <div className="flex items-center gap-3">
-                            <ShieldCheck className="text-[#174f46]" size={20} />
-                            <span className="font-medium text-[#002f26]">Experienced & Reliable</span>
-                        </div>
-                        <div className="flex items-center gap-3">
-                            <CalendarDays className="text-[#174f46]" size={20} />
-                            <span className="font-medium text-[#002f26]">Flexible Scheduling</span>
-                        </div>
-                        <div className="flex items-center gap-3">
-                            <Leaf className="text-[#174f46]" size={20} />
-                            <span className="font-medium text-[#002f26]">Eco-Friendly Products</span>
-                        </div>
-                        <div className="flex items-center gap-3">
-                            <svg className="text-[#174f46]" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24" height={20} width={20}>
-                                <path d="M3 10s1-2 9-2 9 2 9 2v6s-1 2-9 2-9-2-9-2v-6z"></path>
-                            </svg>
-                            <span className="font-medium text-[#002f26]">Transparent Pricing</span>
-                        </div>
+                        <Feature/>
                     </div>
                     <div className="flex flex-wrap items-center gap-4">
-                        <button className="px-6 py-3 border border-[#174f46] text-[#174f46] rounded-2xl font-medium hover:bg-[#174f46] hover:text-white transition cursor-pointer">
-                            Learn more
-                        </button>
+                        <Button label='Learn more' variant='outline' onClick={() => { }} />
                         <a href="tel:+917814686228" className="flex items-center gap-2 text-[#174f46] font-medium">
                             <Phone size={18} />
                             +91-7814686228
