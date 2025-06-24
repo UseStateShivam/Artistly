@@ -4,40 +4,40 @@ import React from 'react';
 
 const services = [
   {
-    icon: '/icons/house-cleaning.svg',
-    title: 'House cleaning',
+    icon: '/icons/mic.svg',
+    title: 'Singers',
     description:
-      'Our house cleaning services are designed to keep your home tidy, and healthy. We take care of all the essential cleaning tasks, from dusting.',
+      'Professional vocalists for events, recordings, and live performances across various genres to elevate your occasion.',
   },
   {
-    icon: '/icons/deep-cleaning.svg',
-    title: 'Deep Cleaning',
+    icon: '/icons/dancer.svg',
+    title: 'Dancers',
     description:
-      'For those times when your home needs more than just a surface clean, our deep cleaning service offers a thorough, detailed approach.',
+      'Talented dancers specializing in diverse styles, available for stage shows, private events, and choreography for all occasions.',
   },
   {
-    icon: '/icons/commercial-cleaning.svg',
-    title: 'Commercial Cleaning',
+    icon: '/icons/dj.svg',
+    title: 'DJs',
     description:
-      'We understand the importance of maintaining a clean and professional environment for your business. Our commercial cleaning services ensure your office.',
+      'Experienced DJs to set the perfect mood, mixing tracks and creating unforgettable musical experiences for any event.',
   },
   {
-    icon: '/icons/industrial-cleaning.svg',
-    title: 'Industrial Cleaning',
+    icon: '/icons/camera.svg',
+    title: 'Photographers',
     description:
-      'Our industrial cleaning services are tailored to meet the unique needs of warehouses, factories, and other large-scale facilities.',
+      'Creative photographers capturing memorable moments for weddings, parties, portraits, and commercial projects alike.',
   },
   {
-    icon: '/icons/window-cleaning.svg',
-    title: 'Window cleaning',
+    icon: '/icons/brush.svg',
+    title: 'Painters',
     description:
-      'Our team delivers streak-free, sparkling clean windows that brighten up your space and enhance your curb appeal.',
+      'Skilled painters offering custom artworks, live painting sessions, and mural creations for personal or business spaces.',
   },
   {
-    icon: '/icons/flood-cleaning.svg',
-    title: 'Flood Damage cleaning',
+    icon: '/icons/makeup.svg',
+    title: 'Makeup Artists',
     description:
-      'Our flood damage cleaning service focuses on water removal, drying, and sanitation to prevent mold growth and restore your property.',
+      'Professional makeup artists for weddings, photoshoots, fashion shows, and special occasions, ensuring you look your best.',
   },
 ];
 
@@ -70,7 +70,7 @@ function OurServices() {
             >
               <div className="absolute inset-0 bg-[#174f46] rounded-xl scale-[1] z-0" />
               <div className="relative z-10 bg-white rounded-xl shadow-lg border border-gray-100 p-6 transition-transform duration-300 group-hover:rotate-[5deg]">
-                <div className="bg-[#DFF6DD] p-3 rounded-md w-fit mb-4">
+                <div className="bg-[#b7f27b] p-3 rounded-md w-fit mb-4">
                   <img src={service.icon} alt={service.title} className="w-6 h-6" />
                 </div>
                 <h3 className="text-lg font-semibold text-[#003c2f] mb-2">
