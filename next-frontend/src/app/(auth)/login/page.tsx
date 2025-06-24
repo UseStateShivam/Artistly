@@ -1,29 +1,9 @@
 'use client';
 
-import React, { useState } from 'react';
-import { useDispatch } from 'react-redux';
-import { login } from '@/lib/slices/authSlice';
-import { useRouter } from 'next/navigation';
+import { useLoginHandler } from '@/lib/hooks/useLoginHandler';
 
 function page() {
-  const [error, setError] = useState("");
-  const dispatch = useDispatch();
-  const router = useRouter();
-
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-
-    const input = (e.currentTarget.elements.namedItem("secret") as HTMLInputElement).value;
-    const normalized = input.toLowerCase().replace(/[^a-z]/g, "");
-
-    if (normalized.includes("shivam") && normalized.includes("verma")) {
-      dispatch(login());
-      router.push('/dashboard');
-    } else {
-      setError("Incorrect secret key, my lord. Try again 👑");
-    }
-  };
-
+  const { handleSubmit, error } = useLoginHandler();
   return (
     <div className='w-screen flex h-screen items-center justify-center overflow-hidden bg-[#174f46]'>
       <div className='relative z-10 flex flex-col items-center justify-center w-[406px] h-auto p-8 bg-white rounded-2xl shadow-lg border border-[#B9B9B9]'>
