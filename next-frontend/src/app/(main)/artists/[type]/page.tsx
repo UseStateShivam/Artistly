@@ -27,7 +27,7 @@ export default function ArtistTypePage({ params }: Props) {
   });
 
   const [currentPage, setCurrentPage] = useState(1);
-  const itemsPerPage = 9;
+  const itemsPerPage = 6;
 
   // Filtered artist list
   const filteredArtists = artistData.filter((artist) => {
