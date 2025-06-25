@@ -14,7 +14,7 @@ function AboutUs() {
             <img
                 src="./about-free-hand.png"
                 alt="hero free hand"
-                className='absolute top-[21%] right-[8%] scale-[12%]'
+                className='absolute top-[17%] right-[8%] scale-[12%]'
             />
             {/* Grid layout for images and content */}
             <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
