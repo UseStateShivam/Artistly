@@ -1,5 +1,6 @@
 'use client'
 
+// Importing required components for the page
 import AboutUs from '@/components/about-us'
 import Footer from '@/components/footer'
 import Nav from '@/components/nav'
@@ -10,11 +11,14 @@ import HeroRatingsList from '@/components/ui/hero-rating'
 import SatisfactionCard from '@/components/ui/satisfaction-card'
 import WorkingProcess from '@/components/working-process'
 
+// Main page component
 function page() {
   return (
     <>
+      {/* Navigation bar */}
       <Nav />
       <main className='w-full h-screen relative'>
+        {/* Hero section background images */}
         <img
           src="./hero-bg.png"
           alt="Eventful India hero section background"
@@ -30,7 +34,9 @@ function page() {
           alt="Arrow graphic highlighting Eventful India call to action"
           className='absolute bottom-[5%] right-[40%] scale-[60%]'
         />
+        {/* Hero section content */}
         <div className='z-10 relative flex items-center justify-between h-full px-24'>
+          {/* Left side: text and actions */}
           <div className="text-[#fff] px-6 pt-18 min-h-screen flex flex-col justify-center w-[50%] gap-6">
             <h1 className="text-6xl font-bold leading-[64px]">
               Brilliant Events,<br />
@@ -39,6 +45,7 @@ function page() {
             <p className="text-lg text-[#dee4e3] pr-8">
               I am Shivam Verma, this is a pre-interview task for Eventful India Marketing Services. It showcases modern, responsive web application and engaging user experience. Thank you for reviewing my work!
             </p>
+            {/* Call to action button and contact info */}
             <div className="flex flex-wrap items-center gap-8">
               <Button label="Explore Artists" onClick={() => window.location.href = '/artists'} />
               <div className="text-sm">
@@ -46,10 +53,12 @@ function page() {
                 <p className="text-[#dee4e3] font-semibold text-lg">📞 +91-7814686228</p>
               </div>
             </div>
+            {/* Ratings list */}
             <div className="flex gap-12 mt-20 flex-wrap">
               <HeroRatingsList />
             </div>
           </div>
+          {/* Right side: hero image and satisfaction card */}
           <div className='h-full w-[50%] flex items-center justify-center pt-18 relative'>
             <img
               src="./hero-img.png"
@@ -59,6 +68,7 @@ function page() {
             <SatisfactionCard />
           </div>
         </div>  
+        {/* Other sections below the hero */}
         <Testimonials />
         <AboutUs />
         <OurServices />

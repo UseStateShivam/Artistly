@@ -1,9 +1,7 @@
+import ClientProvider from "@/components/clientProvider";
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-import { Provider } from "react-redux";
-import { store } from "@/lib/utils/store";
-import ClientProvider from "@/components/clientProvider";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -20,6 +18,13 @@ export const metadata: Metadata = {
   description: "A platform to connect Event Planners with Performing Artists.",
 };
 
+/**
+ * Root layout component for the application.
+ * Wraps all pages with necessary providers and global HTML structure.
+ *
+ * @param children - The content to render inside the layout.
+ * @returns The root HTML structure with providers and children.
+ */
 export default function RootLayout({
   children,
 }: Readonly<{

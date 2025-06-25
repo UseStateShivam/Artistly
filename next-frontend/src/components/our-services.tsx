@@ -4,6 +4,12 @@ import { services } from '@/lib/constants/services';
 import SectionHeader from './ui/section-header';
 import ArtistTypeCard from './ui/artist-type-card';
 
+/**
+ * Renders the "Our Services" section, displaying a header and a grid of service cards.
+ * Each card represents an artistic service and navigates to a specific artist page on click.
+ *
+ * @component
+ */
 function OurServices() {
   return (
     <div className="bg-[#f9fafa] w-full h-full relative mb-24">

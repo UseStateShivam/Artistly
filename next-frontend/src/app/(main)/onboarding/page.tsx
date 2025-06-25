@@ -8,7 +8,9 @@ import {
 } from '@/lib/hooks/useOnboardingForm';
 import FormTitle from '@/components/ui/form-title';
 
+// Main onboarding page component
 export default function OnboardingPage() {
+  // Custom hook for form logic and state
   const {
     register,
     handleSubmit,
@@ -20,12 +22,15 @@ export default function OnboardingPage() {
 
   return (
     <main className="py-28 px-4 md:px-16 max-w-3xl mx-auto">
+      {/* Page title and description */}
       <FormTitle
         title="Onboard as an Artist"
         description="Fill out the form to get listed on Artistly."
       />
 
+      {/* Onboarding form */}
       <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
+        {/* Name input */}
         <div>
           <label className="block font-medium text-[#174f46] mb-1">Name</label>
           <input
@@ -35,6 +40,7 @@ export default function OnboardingPage() {
           {errors.name && <span className="text-red-500 text-sm">Name is required</span>}
         </div>
 
+        {/* Bio input */}
         <div>
           <label className="block font-medium text-[#174f46] mb-1">Bio</label>
           <textarea
@@ -44,6 +50,7 @@ export default function OnboardingPage() {
           {errors.bio && <span className="text-red-500 text-sm">Bio is required</span>}
         </div>
 
+        {/* Categories checkboxes */}
         <div>
           <label className="block font-medium text-[#174f46] mb-2">Categories</label>
           <div className="flex flex-wrap gap-4">
@@ -64,6 +71,7 @@ export default function OnboardingPage() {
           )}
         </div>
 
+        {/* Languages spoken checkboxes */}
         <div>
           <label className="block font-medium text-[#174f46] mb-2">Languages Spoken</label>
           <div className="flex flex-wrap gap-4">
@@ -76,6 +84,7 @@ export default function OnboardingPage() {
           </div>
         </div>
 
+        {/* Fee range input */}
         <div>
           <label className="block font-medium text-[#174f46] mb-1">Fee Range</label>
           <input
@@ -89,6 +98,7 @@ export default function OnboardingPage() {
           )}
         </div>
 
+        {/* Profile image upload */}
         <div>
           <label className="block font-medium text-[#174f46] mb-1">Profile Image</label>
           <div className="flex items-center gap-4">
@@ -105,6 +115,7 @@ export default function OnboardingPage() {
           </div>
         </div>
 
+        {/* Location input */}
         <div>
           <label className="block font-medium text-[#174f46] mb-1">Location</label>
           <input
@@ -116,6 +127,7 @@ export default function OnboardingPage() {
           )}
         </div>
 
+        {/* Submit button */}
         <button
           type="submit"
           className="bg-[#174f46] text-[#b7f37b] px-6 py-3 rounded-md hover:bg-[#133e39] cursor-pointer"

@@ -8,6 +8,22 @@ type Filters = {
   price: string;
 };
 
+/**
+ * Custom React hook for searching and filtering artists with pagination.
+ *
+ * @param initialFilters - Optional initial filter values for the artist search.
+ * @param itemsPerPage - Number of artists to display per page (default is 10).
+ * @returns An object containing:
+ *   - filters: Current filter values.
+ *   - setFilters: Function to update filters.
+ *   - currentPage: Current page number.
+ *   - setCurrentPage: Function to update the current page.
+ *   - totalArtists: Total number of artists matching the filters.
+ *   - totalPages: Total number of pages.
+ *   - paginatedArtists: Artists for the current page.
+ *   - startIndex: Start index of the current page.
+ *   - endIndex: End index of the current page.
+ */
 export function useArtistSearch(initialFilters?: Partial<Filters>, itemsPerPage = 10) {
   const [filters, setFilters] = useState<Filters>({
     name: "",

@@ -2,6 +2,7 @@
 
 import React from 'react';
 
+// Define the props for the Filter component
 type FilterProps = {
   filters: {
     name: string;
@@ -15,16 +16,18 @@ type FilterProps = {
     location: string;
     price: string;
   }>>;
-  view?: 'horizontal' | 'vertical';
-  searchCategory?: boolean;
+  view?: 'horizontal' | 'vertical'; // Layout direction
+  searchCategory?: boolean; // Whether to show category filter
 };
 
+// Filter component for filtering artists
 export default function Filter({
   filters,
   setFilters,
   view = 'vertical',
   searchCategory = false,
 }: FilterProps) {
+  // Options for price and category dropdowns
   const prices = ['All', 'Under ₹10k', '₹10k - ₹20k', 'Above ₹20k'];
   const categories = ['All', 'Singer', 'Dancer', 'DJ', 'Makeup-Artist', 'Photographer', 'Painter'];
   const isHorizontal = view === 'horizontal';
@@ -35,11 +38,12 @@ export default function Filter({
         isHorizontal ? 'flex flex-wrap gap-4 items-end' : 'w-full md:w-64'
       } bg-[#dee4e3] p-4 rounded-xl shadow-md`}
     >
+      {/* Filter title */}
       <h3 className={`text-lg font-semibold text-[#174f46] ${isHorizontal ? 'w-full mb-2' : 'mb-4'}`}>
         Filter Artists
       </h3>
 
-      {/* Name */}
+      {/* Name filter input */}
       <div className={isHorizontal ? 'flex flex-col' : 'mb-4 w-full'}>
         <label className="block text-sm font-medium text-[#174f46] mb-1">Search by Name</label>
         <input
@@ -51,7 +55,7 @@ export default function Filter({
         />
       </div>
 
-      {/* Category (optional) */}
+      {/* Category filter dropdown (optional) */}
       {searchCategory && (
         <div className={isHorizontal ? 'flex flex-col' : 'mb-4 w-full'}>
           <label className="block text-sm font-medium text-[#174f46] mb-1">Category</label>
@@ -69,7 +73,7 @@ export default function Filter({
         </div>
       )}
 
-      {/* Location */}
+      {/* Location filter input */}
       <div className={isHorizontal ? 'flex flex-col' : 'mb-4 w-full'}>
         <label className="block text-sm font-medium text-[#174f46] mb-1">Location</label>
         <input
@@ -81,7 +85,7 @@ export default function Filter({
         />
       </div>
 
-      {/* Price */}
+      {/* Price filter dropdown */}
       <div className={isHorizontal ? 'flex flex-col' : 'w-full'}>
         <label className="block text-sm font-medium text-[#174f46] mb-1">Price</label>
         <select

@@ -8,6 +8,15 @@ type ArtistTypeCardProps = {
   className?: string
 }
 
+/**
+ * Renders a card component representing an artist type with an icon, title, and description.
+ * 
+ * @param title - The title of the artist type.
+ * @param description - A short description of the artist type.
+ * @param icon - The URL of the icon image to display.
+ * @param onClick - Optional click handler for the card. If not provided, navigates to `/artists/{title}`.
+ * @param className - Optional additional CSS classes for the card container.
+ */
 function ArtistTypeCard({
   title,
   description,

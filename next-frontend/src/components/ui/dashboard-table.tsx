@@ -13,6 +13,15 @@ type DashboardTableProps<T> = {
     emptyMessage?: string
 }
 
+/**
+ * Renders a generic dashboard table component.
+ *
+ * @template T - The type of data for each row, which must include an `id` property.
+ * @param props.columns - Array of column definitions, including header, accessor, and optional render function.
+ * @param props.data - Array of data objects to display in the table.
+ * @param props.emptyMessage - Optional message to display when there is no data. Defaults to "No data found."
+ * @returns A styled table displaying the provided data and columns.
+ */
 function DashboardTable<T extends { id: string | number }>({
     columns,
     data,

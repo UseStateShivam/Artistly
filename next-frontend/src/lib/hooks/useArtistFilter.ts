@@ -8,6 +8,22 @@ type Filters = {
   price: string;
 };
 
+/**
+ * Custom React hook to filter and paginate a list of artists based on category, name, location, and price.
+ *
+ * @param type - The category of artists to filter by.
+ * @param itemsPerPage - Number of artists to display per page (default is 6).
+ * @returns An object containing:
+ *   - filters: Current filter values.
+ *   - setFilters: Function to update filter values.
+ *   - currentPage: Current page number.
+ *   - setCurrentPage: Function to update the current page.
+ *   - totalArtists: Total number of filtered artists.
+ *   - totalPages: Total number of pages.
+ *   - paginatedArtists: Artists for the current page.
+ *   - startIndex: Index of the first artist on the current page.
+ *   - endIndex: Index of the last artist on the current page.
+ */
 export function useArtistFilter(type: string, itemsPerPage = 6) {
   const [filters, setFilters] = useState<Filters>({
     name: "",

@@ -10,6 +10,14 @@ import { useArtistSearch } from '@/lib/hooks/useArtistSearch'; // ✅ use hook
 import DashboardTable from '@/components/ui/dashboard-table';
 import Button from '@/components/ui/button';
 
+/**
+ * Renders the Manager Dashboard page.
+ *
+ * Displays a list of onboarded artists with filtering and pagination options.
+ * Redirects to the login page if the user is not authenticated.
+ *
+ * @returns The Manager Dashboard component.
+ */
 export default function ManagerDashboard() {
   const isLoggedIn = useSelector((state: RootState) => state.auth.isLoggedIn);
   const router = useRouter();

@@ -3,6 +3,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 
+// List of client objects with name and logo path
 const clients = [
   { name: 'Goodwell', logo: '/logos/goodwell.png' },
   { name: 'Ikigai Labs', logo: '/logos/ikigai.png' },
@@ -12,21 +13,26 @@ const clients = [
   { name: 'Galileo', logo: '/logos/galileo.png' },
 ];
 
+// Duplicate the clients array for seamless scrolling effect
 const duplicatedClients = [...clients, ...clients];
 
 function Testimonials() {
   return (
+    // Container for the testimonials section
     <div className="py-8 overflow-hidden bg-[#f9fafa]">
+      {/* Section title */}
       <h2 className="text-center text-xl md:text-2xl font-semibold text-[#174f46] mb-6">
         Our Exceptional Clients
       </h2>
 
+      {/* Scrolling logos container */}
       <div className="relative w-full overflow-hidden px-[150px]">
-        {/* Gradient overlays */}
+        {/* Left gradient overlay */}
         <div className="pointer-events-none absolute top-0 left-0 h-full w-[556px] bg-gradient-to-r from-[#f9fafa] to-transparent z-10" />
+        {/* Right gradient overlay */}
         <div className="pointer-events-none absolute top-0 right-0 h-full w-[556px] bg-gradient-to-l from-[#f9fafa] to-transparent z-10" />
 
-        {/* Animated logos */}
+        {/* Animated row of client logos */}
         <motion.div
           className="flex gap-8 w-max items-center"
           initial={{ x: 0 }}
@@ -38,6 +44,7 @@ function Testimonials() {
             ease: 'linear',
           }}
         >
+          {/* Render each client logo */}
           {duplicatedClients.map((client, index) => (
             <img
               key={`${client.name}-${index}`}
@@ -53,3 +60,4 @@ function Testimonials() {
 }
 
 export default Testimonials;
+

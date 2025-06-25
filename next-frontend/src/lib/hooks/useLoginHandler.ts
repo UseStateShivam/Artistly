@@ -5,6 +5,13 @@ import { useDispatch } from 'react-redux';
 import { login } from '@/lib/slices/authSlice';
 import { useState } from 'react';
 
+/**
+ * Custom hook to handle login form submission logic.
+ *
+ * Manages error state, dispatches login action, and redirects on successful login.
+ *
+ * @returns An object containing the `handleSubmit` function for form submission and the current `error` message.
+ */
 export function useLoginHandler() {
   const [error, setError] = useState('');
   const dispatch = useDispatch();

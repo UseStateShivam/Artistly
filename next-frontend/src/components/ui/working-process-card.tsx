@@ -12,6 +12,13 @@ type WorkingProcessCardProps = {
   idx?: number | string
 }
 
+/**
+ * Renders a card displaying a step in the working process.
+ *
+ * @param step - The step data containing the step number, title, and points.
+ * @param idx - The index of the step, used as a key.
+ * @returns A styled card component with step details and a list of points.
+ */
 const WorkingProcessCard: React.FC<WorkingProcessCardProps> = ({
   step,
   idx,
