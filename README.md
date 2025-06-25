@@ -94,7 +94,7 @@ This is my submission for the **Frontend Next.js Developer Test Assignment** for
 ---
 
 ## 📁 Folder Structure
-
+```lua
 Mode                 LastWriteTime         Length Name
 ----                 -------------         ------ ----
 d-----        24-06-2025     21:31                (auth)
@@ -102,15 +102,15 @@ d-----        24-06-2025     20:20                (main)
 -a----        25-06-2025     13:00            251 globals.css
 -a----        25-06-2025     13:00           1141 layout.tsx
 -a----        25-06-2025     14:32           3591 page.tsx
-
-
+```
+```lua
 Mode                 LastWriteTime         Length Name
 ----                 -------------         ------ ----
 d-----        24-06-2025     18:41                artists
 d-----        23-06-2025     18:43                dashboard
 d-----        25-06-2025     03:06                onboarding
 -a----        25-06-2025     13:01           1009 layout.tsx
-
+```
 
 ---
 
