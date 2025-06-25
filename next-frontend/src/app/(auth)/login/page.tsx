@@ -2,7 +2,7 @@
 
 import { useLoginHandler } from '@/lib/hooks/useLoginHandler';
 
-function page() {
+function Page() {
   const { handleSubmit, error } = useLoginHandler();
 
   return (
@@ -47,7 +47,7 @@ function page() {
         </form>
 
         <p className="text-center mt-4 text-sm opacity-80 text-[#000]">
-          Don't know what the key is?&nbsp;
+          <p>Don&apos;t know what the key is?</p>
           <span className="text-[#174f46] underline">Try my full name</span>
         </p>
         <p className="text-center text-sm opacity-80 text-[#7c7c7c]">
@@ -58,4 +58,4 @@ function page() {
   );
 }
 
-export default page;
+export default Page;
