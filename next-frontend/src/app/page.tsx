@@ -37,7 +37,7 @@ function page() {
         {/* Hero section content */}
         <div className='z-10 relative flex flex-col md:flex-row items-center justify-between h-full px-4 md:px-24'>
           {/* Left side: text and actions */}
-          <div className="text-[#fff] px-4 md:px-6 pt-20 md:pt-18 min-h-[60vh] md:min-h-screen flex flex-col justify-center w-full md:w-[50%] gap-6">
+          <div className="text-[#fff] px-4 md:px-6 pt-32 md:pt-18 min-h-[60vh] md:min-h-screen flex flex-col justify-center w-full md:w-[50%] gap-6">
             <h1 className="text-4xl md:text-6xl font-bold leading-tight md:leading-[64px]">
               Brilliant Events,<br />
               Magical <span className="text-[#b7f37b]">Experiences</span>

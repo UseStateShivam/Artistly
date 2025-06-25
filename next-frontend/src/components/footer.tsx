@@ -104,17 +104,17 @@ function page() {
                     {/* Email */}
                     <div className="flex items-center gap-2">
                         <Mail size={16} />
-                        <span>eamin@grabui.com</span>
+                        <span>mcrafter147@gmail.com</span>
                     </div>
                     {/* Phone */}
                     <div className="flex items-center gap-2">
                         <Phone size={16} />
-                        <span>+1-307-285-7290</span>
+                        <span>+91-7814686228</span>
                     </div>
                     {/* Address */}
                     <div className="flex items-center gap-2">
                         <MapPin size={16} />
-                        <span>6391 Elgin St. Celina, Delaware 10299</span>
+                        <span>Chandigarh, India</span>
                     </div>
                 </div>
             </footer>

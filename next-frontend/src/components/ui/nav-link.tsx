@@ -7,25 +7,22 @@ interface NavLinkProps {
   onClick?: () => void;
 }
 
-/**
- * Renders a navigation link inside a list item.
- *
- * @param href - The URL to navigate to when the link is clicked.
- * @param children - The content to display inside the link.
- * @param className - Optional CSS classes to apply to the link.
- * @param onClick - Optional onClick handler (useful for closing mobile menu).
- */
 function NavLink({
   href,
   children,
-  className = 'no-underline text-[#dee4e3] hover:text-[#b7f37b] transition-colors',
+  className = '',
   onClick,
 }: NavLinkProps) {
   return (
-    <li className="w-full md:w-auto">
+    <li className="w-full md:w-auto list-none">
       <a
         href={href}
-        className={`block py-2 md:py-0 ${className}`}
+        className={`
+          block w-full text-center md:text-left px-4 py-3 md:py-0 rounded-md
+          text-[#dee4e3] hover:text-[#b7f37b] hover:bg-[#174f46]/10
+          transition-all duration-200 ease-in-out
+          ${className}
+        `}
         onClick={onClick}
       >
         {children}

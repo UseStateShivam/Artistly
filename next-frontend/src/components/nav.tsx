@@ -43,7 +43,7 @@ function Nav() {
 
             {/* Mobile Menu */}
             {isOpen && (
-                <div className="absolute top-[64px] left-0 w-full bg-[#174f46] flex flex-col gap-4 items-start p-4 md:hidden z-50 shadow-md">
+                <div className="absolute top-[64px] left-0 w-full bg-[#174f46] flex flex-col gap-4 items-center p-4 md:hidden z-50 shadow-md">
                     <NavLink href="/" onClick={() => setIsOpen(false)}>Home</NavLink>
                     <NavLink href="/artists" onClick={() => setIsOpen(false)}>Artists</NavLink>
                     <NavLink href="/onboarding" onClick={() => setIsOpen(false)}>Onboarding</NavLink>
