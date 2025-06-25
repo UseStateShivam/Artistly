@@ -4,7 +4,7 @@ import WorkingProcessCard from './ui/working-process-card';
 
 function WorkingProcess() {
   return (
-    <section className="px-6 sm:px-10 md:px-20 lg:px-36 py-16 relative mb-16">
+    <section className="px-6 sm:px-10 md:px-20 lg:px-36 md:py-16 lg:py-16 relative mb-16">
       {/* Decorative background image */}
       <img
         src="./about-free-hand.png"

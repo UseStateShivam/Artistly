@@ -9,7 +9,7 @@ import SectionHeader from './ui/section-header';
 function AboutUs() {
     return (
         // Main container with background and padding
-        <div className="bg-[#f9fafa] py-16 px-6 md:px-12 lg:px-20 relative mb-16" id={'about-us'}>
+        <div className="bg-[#f9fafa] py-16 px-6 md:px-12 lg:px-20 relative mb-6 md:mb-16 lg:mb-16" id={'about-us'}>
             {/* Decorative image positioned absolutely */}
             <img
                 src="./about-free-hand.png"
