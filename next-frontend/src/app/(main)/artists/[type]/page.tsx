@@ -20,11 +20,7 @@ type Props = {
 export default function ArtistTypePage({ params }: Props) {
   // Await the params promise to get the type
   const { type } = use(params);
-
-  // Check if the type is valid
-  const valid = artistTypes.includes(type);
-  if (!valid) return notFound();
-
+ 
   // Use custom hook to manage filters, pagination, and artist data
   const {
     filters,
@@ -37,7 +33,11 @@ export default function ArtistTypePage({ params }: Props) {
     startIndex,
     endIndex,
   } = useArtistFilter(type);
-
+  
+  // Check if the type is valid
+  const valid = artistTypes.includes(type);
+  if (!valid) return notFound();
+  
   return (
     <main className="py-28 px-4 md:px-16">
       {/* Page title */}
