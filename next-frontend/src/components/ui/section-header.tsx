@@ -1,50 +1,46 @@
 import React from "react";
 
-// Define the props for the SectionHeader component
 interface SectionHeaderProps {
-  title?: string; // Optional title text
-  subtitle?: string; // Optional subtitle text
-  description?: string; // Optional description text
-  align?: "left" | "center"; // Alignment option
+  title?: string;
+  subtitle?: string;
+  description?: string;
+  align?: "left" | "center";
 }
 
-// Functional component for rendering a section header
 function SectionHeader({
   title,
   subtitle,
   description,
   align,
 }: SectionHeaderProps) {
-  const isLeft = align === "left"; // Determine if alignment is left
+  const isLeft = align === "left";
+
   return (
     <div
-      // Set flex alignment based on the 'align' prop
-      className={`flex flex-col justify-center items-${isLeft ? "start" : "center"} mx-auto`}
+      className={`flex flex-col justify-center ${
+        isLeft ? "items-start text-left" : "items-center text-center"
+      } w-full mx-auto px-4 md:px-0`}
     >
-      {/* Render the title */}
-      <p
-        className={`text-sm font-semibold text-[#174f46] tracking-wide mb-3 ${
-          isLeft ? "text-left" : "text-center"
-        }`}
-      >
-        {title}
-      </p>
-      {/* Render the subtitle */}
-      <h2
-        className={`text-[56px] font-bold text-[#174f46] mb-6 leading-[56px] ${
-          isLeft ? "text-left" : "text-center"
-        }`}
-      >
-        {subtitle}
-      </h2>
-      {/* Render the description */}
-      <p
-        className={`text-[#174f46] leading-relaxed ${
-          isLeft ? "text-left" : "text-center"
-        } w-[76%] text-lg`}
-      >
-        {description}
-      </p>
+      {/* Title */}
+      {title && (
+        <p className="text-sm font-semibold text-[#174f46] tracking-wide mb-3">
+          {title}
+        </p>
+      )}
+
+      {/* Subtitle */}
+      {subtitle && (
+        <h2 className="text-[32px] sm:text-[40px] md:text-[56px] font-bold text-[#174f46] mb-6 leading-tight">
+          {subtitle}
+        </h2>
+      )}
+
+      {/* Description */}
+      {description && (
+        <p className="text-[#174f46] leading-relaxed text-base sm:text-lg w-full max-w-[90%] md:max-w-[76%]">
+          {description}
+        </p>
+      )}
     </div>
   );
 }

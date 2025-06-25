@@ -18,7 +18,7 @@ function OurServices() {
         alt="hero free hand"
         className="absolute -top-[5.8%] right-[14%] scale-[10%]"
       />
-      <div className='w-[50%] mx-auto mb-8'>
+      <div className='w-full md:w-[50%] mx-auto mb-8'>
         <SectionHeader
           title="OUR SERVICES"
           subtitle="One-Stop Solution for All Your Artistic Needs"
@@ -26,7 +26,7 @@ function OurServices() {
         />
       </div>
       <div className="p-8 md:px-12 lg:px-20">
-        <div className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="max-w-7xl mx-auto grid grid-cols-3 sm:grid-cols-3 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 md:gap-8">
           {services.map((service, idx) => (
             <ArtistTypeCard
               key={idx}
@@ -38,6 +38,7 @@ function OurServices() {
             />
           ))}
         </div>
+
       </div>
     </div>
   );

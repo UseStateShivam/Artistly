@@ -29,7 +29,7 @@ function AboutUs() {
                         src="/about-img-2.png"
                         alt="Cleaning Tools"
                         className="rounded-2xl w-[36%] shadow-md ml-6 -mt-10"
-                    />
+                    />  
                 </div>
                 {/* Right side: Text and features */}
                 <div className='flex flex-col justify-end items-start h-full w-full'>
