@@ -1,5 +1,6 @@
 import { CUSTOMER_COUNT, CUSTOMER_LABEL, USERS } from '@/lib/constants/hero-testimonials'
 import React from 'react'
+import Image from 'next/image'
 
 // SatisfactionCard component displays user avatars and customer statistics
 function SatisfactionCard() {
@@ -9,10 +10,12 @@ function SatisfactionCard() {
             {/* User avatars */}
             <div className="flex -space-x-6">
                 {USERS.map((user, idx) => (
-                    <img
+                    <Image
                         key={user.src}
                         src={user.src}
                         alt={user.alt}
+                        width={48}
+                        height={48}
                         className="w-12 h-12 rounded-full border-2 border-white object-cover"
                     />
                 ))}

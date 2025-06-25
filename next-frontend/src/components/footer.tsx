@@ -1,17 +1,19 @@
 'use client'
 import { Facebook, Instagram, Mail, MapPin, Phone, Twitter } from 'lucide-react'
 import Link from 'next/link'
+import Image from 'next/image'
 
 // Footer component for the website
 function page() {
     return (
         // Main container with background image
         <main className='w-full h-fit relative'>
-            {/* Background image for the footer */}
-            <img
+            <Image
                 src="/footer.avif"
                 alt="footer background"
+                fill
                 className='absolute object-cover w-full h-full inset-0 top-0 left-0 right-0 -z-10'
+                priority
             />
             <footer className="text-white px-6 md:px-12 lg:px-20 py-12">
                 {/* Footer content grid */}

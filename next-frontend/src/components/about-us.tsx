@@ -5,6 +5,7 @@ import Button from './ui/button';
 import Feature from './ui/feature';
 import SectionHeader from './ui/section-header';
 import Link from 'next/link';
+import Image from 'next/image';
 
 // AboutUs component displays the About Us section of the website
 function AboutUs() {
@@ -12,24 +13,34 @@ function AboutUs() {
         // Main container with background and padding
         <div className="bg-[#f9fafa] py-16 px-6 md:px-12 lg:px-20 relative mb-6 md:mb-16 lg:mb-16" id={'about-us'}>
             {/* Decorative image positioned absolutely */}
-            <img
-                src="./about-free-hand.png"
-                alt="hero free hand"
-                className='absolute top-[17%] right-[8%] scale-[12%] hidden lg:block'
-            />
+            <div className='absolute top-[17%] right-[8%] scale-[12%] hidden lg:block'>
+                <Image
+                    src="/about-free-hand.png"
+                    alt="hero free hand"
+                    width={400}
+                    height={400}
+                    priority
+                />
+            </div>
             {/* Grid layout for images and content */}
             <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
                 {/* Left side: Images */}
                 <div className="relative flex items-end justify-center">
-                    <img
+                    <Image
                         src="/about-img-1.png"
                         alt="Cleaning in action"
                         className="rounded-3xl w-[65%] h-auto object-cover"
+                        width={400}
+                        height={500}
+                        priority
                     />
-                    <img
+                    <Image
                         src="/about-img-2.png"
                         alt="Cleaning Tools"
                         className="rounded-2xl w-[36%] shadow-md ml-6 -mt-10"
+                        width={220}
+                        height={300}
+                        priority
                     />  
                 </div>
                 {/* Right side: Text and features */}

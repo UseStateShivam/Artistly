@@ -10,6 +10,7 @@ import Button from '@/components/ui/button'
 import HeroRatingsList from '@/components/ui/hero-rating'
 import SatisfactionCard from '@/components/ui/satisfaction-card'
 import WorkingProcess from '@/components/working-process'
+import Image from 'next/image'
 
 // Main page component
 function page() {
@@ -18,21 +19,25 @@ function page() {
       {/* Navigation bar */}
       <Nav />
       <main className='w-full h-screen relative'>
-        {/* Hero section background images */}
-        <img
-          src="./hero-bg.png"
+        <Image
+          src="/hero-bg.png"
           alt="Eventful India hero section background"
-          className='absolute object-cover w-full h-full inset-0 top-0 left-0 right-0 -z-10'
+          fill
+          className="absolute object-cover w-full h-full inset-0 top-0 left-0 right-0 -z-10"
         />
-        <img
-          src="./hero-free-hand.png"
+        <Image
+          src="/hero-free-hand.png"
           alt="Free hand illustration for Eventful India hero section"
-          className='absolute top-[39%] right-[48%] scale-[60%] hidden md:block'
+          width={260}
+          height={400}
+          className="absolute top-[39%] right-[46%] scale-[60%] hidden md:block"
         />
-        <img
-          src="./hero-arrow.png"
+        <Image
+          src="/hero-arrow.png"
           alt="Arrow graphic highlighting Eventful India call to action"
-          className='absolute bottom-[5%] right-[40%] scale-[60%] hidden md:block'
+          width={360}
+          height={200}
+          className="absolute bottom-[5%] right-[40%] scale-[60%] hidden md:block"
         />
         {/* Hero section content */}
         <div className='z-10 relative flex flex-col md:flex-row items-center justify-between h-full px-4 md:px-24'>
@@ -59,14 +64,17 @@ function page() {
             </div>
           </div>
           {/* Right side: hero image and satisfaction card */}
-          <div className='h-full w-full md:w-[50%] flex items-center justify-center pt-10 md:pt-18 relative'>
-            <img
-              src="./hero-img.png"
+            <div className='h-full w-full md:w-[50%] flex items-center justify-center pt-10 md:pt-18 relative'>
+            <Image
+              src="/hero-img.png"
               alt="Eventful India main hero image with artist illustration"
-              className='w-[80%]'
+              width={600}
+              height={600}
+              className='w-[80%] h-auto'
+              priority
             />
             <SatisfactionCard />
-          </div>
+            </div>
         </div>
         {/* Other sections below the hero */}
         <Testimonials />

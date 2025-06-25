@@ -1,4 +1,5 @@
 import React from 'react';
+import Image from 'next/image';
 
 type ArtistTypeCardProps = {
   title: string;
@@ -36,7 +37,13 @@ function ArtistTypeCard({
         {/* Mobile: Icon & Title centered */}
         <div className="flex flex-col items-center justify-center text-center h-full md:items-start md:justify-start md:text-left">
           <div className="bg-[#b7f27b] p-3 rounded-md w-fit mb-4">
-            <img src={icon} alt={title} className="w-6 h-6" />
+            <Image
+              src={icon}
+              alt={title}
+              width={24}
+              height={24}
+              className="w-6 h-6"
+            />
           </div>
 
           <h3

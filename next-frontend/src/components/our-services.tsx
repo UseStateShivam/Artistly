@@ -1,5 +1,6 @@
 'use client';
 
+import Image from 'next/image';
 import { services } from '@/lib/constants/services';
 import SectionHeader from './ui/section-header';
 import ArtistTypeCard from './ui/artist-type-card';
@@ -13,11 +14,16 @@ import ArtistTypeCard from './ui/artist-type-card';
 function OurServices() {
   return (
     <div className="bg-[#f9fafa] w-full h-fit relative mb-16 md:mb-24 lg:mb-16">
-      <img
-        src="./about-free-hand.png"
-        alt="hero free hand"
-        className="absolute -top-[5.8%] right-[14%] scale-[10%] hidden lg:block"
-      />
+      <div className="absolute -top-[0.5%] right-[36%] scale-[28%] hidden lg:block">
+        <Image
+          src="/about-free-hand.png"
+          alt="hero free hand"
+          width={400}
+          height={400}
+          style={{ width: '100%', height: 'auto' }}
+          priority
+        />
+      </div>
       <div className='w-full md:w-[50%] mx-auto mb-8'>
         <SectionHeader
           title="OUR SERVICES"
@@ -38,7 +44,6 @@ function OurServices() {
             />
           ))}
         </div>
-
       </div>
     </div>
   );

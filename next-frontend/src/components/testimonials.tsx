@@ -2,6 +2,7 @@
 
 import React from 'react';
 import { motion } from 'framer-motion';
+import Image from 'next/image';
 
 // List of client objects with name and logo path
 const clients = [
@@ -46,12 +47,17 @@ function Testimonials() {
         >
           {/* Render each client logo */}
           {duplicatedClients.map((client, index) => (
-            <img
-              key={`${client.name}-${index}`}
-              src={client.logo}
-              alt={client.name}
-              className="h-20 opacity-60"
-            />
+            <div key={`${client.name}-${index}`} className="h-20 flex items-center opacity-60">
+              <Image
+                src={client.logo}
+                alt={client.name}
+                height={80}
+                width={120}
+                style={{ objectFit: 'contain' }}
+                className="h-20 w-auto"
+                priority={index < clients.length}
+              />
+            </div>
           ))}
         </motion.div>
       </div>
@@ -60,4 +66,3 @@ function Testimonials() {
 }
 
 export default Testimonials;
-
