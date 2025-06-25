@@ -9,7 +9,7 @@ function WorkingProcess() {
       <img
         src="./about-free-hand.png"
         alt="hero free hand"
-        className="absolute top-[3.3%] -left-[18%] scale-[12%] pointer-events-none select-none"
+        className="absolute top-[3.3%] -left-[22%] scale-[12%] pointer-events-none select-none"
       />
 
       {/* Responsive flex layout */}
