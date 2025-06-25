@@ -9,7 +9,7 @@ function SatisfactionCard() {
         <div className="flex items-center gap-3 bg-white rounded-2xl px-4 py-4 border border-[#dbe2ea] shadow absolute bottom-[20%] left-0 z-[100]">
             {/* User avatars */}
             <div className="flex -space-x-6">
-                {USERS.map((user, idx) => (
+                {USERS.map((user) => (
                     <Image
                         key={user.src}
                         src={user.src}
