@@ -29,7 +29,7 @@ function WorkingProcess() {
                 </div>
                 <div className="flex flex-col gap-3 w-[40%] justify-end">
                     {steps.map((step, idx) => (
-                        <WorkingProcessCard step={step} idx={idx} />
+                        <WorkingProcessCard step={step} idx={idx} key={idx}/>
                     ))}
                 </div>
             </div>

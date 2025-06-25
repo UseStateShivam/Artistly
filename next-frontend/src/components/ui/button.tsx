@@ -4,6 +4,7 @@ interface ButtonProps {
     label: string;
     onClick: () => void;
     variant?: "primary" | "secondary" | "outline" | "danger";
+    ariaLabel?: string;
 }
 
 const variantClasses = {
@@ -13,11 +14,12 @@ const variantClasses = {
     danger: "bg-red-600 text-white px-6 py-3 rounded-2xl font-semibold hover:bg-red-700 transition cursor-pointer"
 };
 
-function Button({ label, onClick, variant = "primary" }: ButtonProps) {
+function Button({ label, onClick, variant = "primary", ariaLabel }: ButtonProps) {
     return (
         <button
             className={variantClasses[variant]}
             onClick={onClick}
+            aria-label={ariaLabel || label}
         >
             {label}
         </button>

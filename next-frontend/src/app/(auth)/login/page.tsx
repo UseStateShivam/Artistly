@@ -49,7 +49,7 @@ function page() {
           <span className="text-[#174f46] underline">Try my full name</span>
         </p>
         <p className="text-center text-sm opacity-80 text-[#7c7c7c]">
-          *What do you mean you forgot!!?? 😭 go back to the homepage, it's right in the Hero Section
+          *What do you mean you forgot!!?? 😭<br/> [HINT]: Try Shivam Verma
         </p>
       </div>
     </div>
