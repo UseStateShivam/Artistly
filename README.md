@@ -11,7 +11,7 @@ This is my submission for the **Frontend Next.js Developer Test Assignment** for
 
 ## 🚀 Live Demo
 
-🌍 **Deployed on Vercel:** [https://eventful-india-demo.vercel.app](https://eventful-india-demo.vercel.app)
+🌍 **Deployed on Vercel:** [https://artistly-khaki-ten.vercel.app/](https://artistly-khaki-ten.vercel.app/)
 
 ---
 
