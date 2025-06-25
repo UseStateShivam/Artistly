@@ -43,24 +43,23 @@ function page() {
                         <div>
                             <h4 className="text-sm font-semibold text-white mb-4">COMPANY</h4>
                             <ul className="space-y-2 text-sm text-gray-300">
-                                <li><a href="#">Home</a></li>
-                                <li><a href="#">About</a></li>
-                                <li><a href="#">Pricing</a></li>
-                                <li><a href="#">Blog</a></li>
-                                <li><a href="#">Blog details</a></li>
+                                <li><a href="/">Home</a></li>
+                                <li><a href="/artists">Artists</a></li>
+                                <li><a href="/onboarding">Onboarding</a></li>
+                                <li><a href="/#about-us">About Us</a></li>
                             </ul>
                         </div>
 
                         {/* Services links */}
                         <div>
-                            <h4 className="text-sm font-semibold text-white mb-4">Services</h4>
+                            <h4 className="text-sm font-semibold text-white mb-4">Artists</h4>
                             <ul className="space-y-2 text-sm text-gray-300">
-                                <li>House cleaning</li>
-                                <li>Deep Cleaning</li>
-                                <li>Commercial Cleaning</li>
-                                <li>Industrial Cleaning</li>
-                                <li>Window Cleaning</li>
-                                <li>Flood Damage Cleanup</li>
+                                <li><a href="/artists/singer">Singer</a></li>
+                                <li><a href="/artists/dancer">Dancer</a></li>
+                                <li><a href="/artists/dj">DJ</a></li>
+                                <li><a href="/artists/makeup-artist">Makeup-Artist</a></li>
+                                <li><a href="/artists/photographer">Photographer</a></li>
+                                <li><a href="/artists/painter">Painter</a></li>
                             </ul>
                         </div>
 
