@@ -12,7 +12,7 @@ import ArtistTypeCard from './ui/artist-type-card';
  */
 function OurServices() {
   return (
-    <div className="bg-[#f9fafa] w-full h-full relative mb-24">
+    <div className="bg-[#f9fafa] w-full h-full relative md:mb-24 lg:mb-40">
       <img
         src="./about-free-hand.png"
         alt="hero free hand"
