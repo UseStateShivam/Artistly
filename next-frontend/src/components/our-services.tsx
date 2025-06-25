@@ -16,7 +16,7 @@ function OurServices() {
       <img
         src="./about-free-hand.png"
         alt="hero free hand"
-        className="absolute -top-[5.8%] right-[14%] scale-[10%]"
+        className="absolute -top-[5.8%] right-[14%] scale-[10%] hidden lg:block"
       />
       <div className='w-full md:w-[50%] mx-auto mb-8'>
         <SectionHeader
