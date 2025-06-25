@@ -1,5 +1,6 @@
 'use client'
 import { Facebook, Instagram, Mail, MapPin, Phone, Twitter } from 'lucide-react'
+import Link from 'next/link'
 
 // Footer component for the website
 function page() {
@@ -18,22 +19,22 @@ function page() {
                     {/* Left: Logo, description, and social links */}
                     <div className="space-y-5 col-span-1 lg:col-span-1">
                         <div className="flex items-center gap-2">
-                            <a href='/' className="font-bold text-[28px] mr-8 text-[#b7f37b]">Artistly</a>
+                            <Link href='/' className="font-bold text-[28px] mr-8 text-[#b7f37b]">Artistly</Link>
                         </div>
                         <p className="text-sm text-gray-200 leading-relaxed">
                             Expert cleaning solutions for homes and businesses, ensuring spotless results with ease and care.
                         </p>
                         {/* Social media icons */}
                         <div className="flex gap-3 pt-2">
-                            <a href="#" className="border border-white rounded-md p-2 hover:bg-white hover:text-black transition">
+                            <Link href="#" className="border border-white rounded-md p-2 hover:bg-white hover:text-black transition">
                                 <Twitter size={16} />
-                            </a>
-                            <a href="#" className="border border-white rounded-md p-2 hover:bg-white hover:text-black transition">
+                            </Link>
+                            <Link href="#" className="border border-white rounded-md p-2 hover:bg-white hover:text-black transition">
                                 <Instagram size={16} />
-                            </a>
-                            <a href="#" className="border border-white rounded-md p-2 hover:bg-white hover:text-black transition">
+                            </Link>
+                            <Link href="#" className="border border-white rounded-md p-2 hover:bg-white hover:text-black transition">
                                 <Facebook size={16} />
-                            </a>
+                            </Link>
                         </div>
                     </div>
 
@@ -43,10 +44,10 @@ function page() {
                         <div>
                             <h4 className="text-sm font-semibold text-white mb-4">COMPANY</h4>
                             <ul className="space-y-2 text-sm text-gray-300">
-                                <li><a href="/">Home</a></li>
-                                <li><a href="/artists">Artists</a></li>
-                                <li><a href="/onboarding">Onboarding</a></li>
-                                <li><a href="/#about-us">About Us</a></li>
+                                <li><Link href="/">Home</Link></li>
+                                <li><Link href="/artists">Artists</Link></li>
+                                <li><Link href="/onboarding">Onboarding</Link></li>
+                                <li><Link href="/#about-us">About Us</Link></li>
                             </ul>
                         </div>
 
@@ -54,12 +55,12 @@ function page() {
                         <div>
                             <h4 className="text-sm font-semibold text-white mb-4">Artists</h4>
                             <ul className="space-y-2 text-sm text-gray-300">
-                                <li><a href="/artists/singer">Singer</a></li>
-                                <li><a href="/artists/dancer">Dancer</a></li>
-                                <li><a href="/artists/dj">DJ</a></li>
-                                <li><a href="/artists/makeup-artist">Makeup-Artist</a></li>
-                                <li><a href="/artists/photographer">Photographer</a></li>
-                                <li><a href="/artists/painter">Painter</a></li>
+                                <li><Link href="/artists/singer">Singer</Link></li>
+                                <li><Link href="/artists/dancer">Dancer</Link></li>
+                                <li><Link href="/artists/dj">DJ</Link></li>
+                                <li><Link href="/artists/makeup-artist">Makeup-Artist</Link></li>
+                                <li><Link href="/artists/photographer">Photographer</Link></li>
+                                <li><Link href="/artists/painter">Painter</Link></li>
                             </ul>
                         </div>
 

@@ -4,6 +4,7 @@ import { Phone } from 'lucide-react';
 import Button from './ui/button';
 import Feature from './ui/feature';
 import SectionHeader from './ui/section-header';
+import Link from 'next/link';
 
 // AboutUs component displays the About Us section of the website
 function AboutUs() {
@@ -49,10 +50,10 @@ function AboutUs() {
                     {/* Call to action: Button and phone link */}
                     <div className="flex flex-wrap items-center gap-4">
                         <Button label='Learn more' variant='outline' onClick={() => { }} />
-                        <a href="tel:+917814686228" className="flex items-center gap-2 text-[#174f46] font-medium">
+                        <Link href="tel:+917814686228" className="flex items-center gap-2 text-[#174f46] font-medium">
                             <Phone size={18} />
                             +91-7814686228
-                        </a>
+                        </Link>
                     </div>
                 </div>
             </div>

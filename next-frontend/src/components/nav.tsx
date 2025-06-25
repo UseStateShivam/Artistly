@@ -4,6 +4,7 @@ import React, { useState } from 'react';
 import NavLink from './ui/nav-link';
 import Button from './ui/button';
 import { Menu, X } from 'lucide-react';
+import Link from 'next/link';
 
 function Nav() {
     const [isOpen, setIsOpen] = useState(false);
@@ -13,7 +14,7 @@ function Nav() {
     return (
         <nav className="fixed top-0 left-0 right-0 z-[100] bg-[#174f46] p-4 md:px-16 flex items-center justify-between">
             {/* Logo */}
-            <a href='/' className="font-bold text-[28px] text-[#b7f37b]">Artistly</a>
+            <Link href='/' className="font-bold text-[28px] text-[#b7f37b]">Artistly</Link>
 
             {/* Hamburger Toggle (Visible on mobile) */}
             <button
