@@ -48,7 +48,7 @@ function page() {
               Magical <span className="text-[#b7f37b]">Experiences</span>
             </h1>
             <p className="text-base md:text-lg text-[#dee4e3] pr-0 md:pr-8">
-              I am Shivam Verma, this is a pre-interview task for Eventful India Marketing Services. It showcases modern, responsive web application and engaging user experience. Thank you for reviewing my work!
+              I am Shivam Verma. This project is a modern, responsive web application designed to highlight services, showcase artists, and provide an engaging user experience for event planning and management.
             </p>
             {/* Call to action button and contact info */}
             <div className="flex flex-col sm:flex-row flex-wrap items-start sm:items-center gap-4 md:gap-8">
