@@ -14,7 +14,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Artistly | Interview App",
+  title: "Artistly | By Shivam Verma",
   description: "A platform to connect Event Planners with Performing Artists.",
 };
 
