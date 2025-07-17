@@ -1,8 +1,4 @@
-# 🎯 Eventful India — Frontend Next.js Developer Test Assignment
-
 Hi Team 👋,
-
-This is my submission for the **Frontend Next.js Developer Test Assignment** for Eventful India.
 
 > ✅ TL;DR: I’ve implemented **every single requirement** from the assignment PDF — clean, fully responsive, production-ready. Check the live demo and code below.  
 > I even added bonus features like **Redux-based login** with **global state management** and **route protection** for the dashboard. 🤘
